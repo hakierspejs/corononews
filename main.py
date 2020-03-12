@@ -33,7 +33,7 @@ def main():
         ret += f'''
             <li>
                 <a href="{story.get("href")}">{story.text}</a>
-                (<a href="{comments.get("href")}">{comments.text}</a>)
+                (<a href="{comments_url}">{comments.text}</a>)
             </li>'''
     return ret
 
