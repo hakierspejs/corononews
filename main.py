@@ -26,7 +26,7 @@ def main():
         story = row.xpath('.//a [@class="storylink"]').pop()
         LOGGER.info('%d: %s', n, story.get('href'))
         c_row = row.getnext()
-        comments = c_row.xpath('.//a [contains(@href, "item?id=")]')[0]
+        comments = c_row.xpath('.//a [contains(@href, "item?id=")]')[-1]
         comments_url = HN_BASE_URL + comments.get('href')
         if has_virus(story.get('href')) or has_virus(comments_url):
             continue
