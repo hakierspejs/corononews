@@ -40,4 +40,4 @@ def main():
 
 if __name__ == '__main__':
     logging.basicConfig(level='INFO')
-    app.run()
+    app.run(host='0.0.0.0')
